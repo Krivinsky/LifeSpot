@@ -7,8 +7,11 @@
         /*Свойства стиля элемента. Подробнее о них в модуле по CSS*/
         .bordered {
             border: 2px solid black;
-            background-color :azure;
+            background-color: azure;
             padding: 10px;
+        }
+        .video-container {
+            display: inline-block;
         }
     </style>
 </head>
@@ -20,24 +23,28 @@
         <!--Параграф-->
         <p> Покажем, что происходит прямо сейчас</p>
 
-        <a href="https://www.youtube.com/live/PlUGk-dcSFQ?si=orgMUVMOnDqs_dK8">
-            <button>
-	            Санкт-Петербург
-            </button>
-        </a>
-
-        <a href="https://www.youtube.com/live/UVftxDFol90?si=HSKtULibsffktkLq">
-	        <button>
-		        Нью-Йорк
-	        </button>
-        </a>
-
-        <a href="https://www.youtube.com/watch?v=JplMzss6_YE&ab_channel=WokiliWanders">
-	        <button>
-		        Лондон
-	        </button>
-        </a>
-
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZYuY3bEp8eY?si=VMvDGS4uiuuJZmpn" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3 class="video-title">  Rio de Janeiro, Copacabana Beach </h3>
+        </div>
+    
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE?si=KyETGYgMkMaoTK3Q" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+        <h3 class="video-title">  London, Bus Ride </h3>
+    </div>
+    
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UVftxDFol90?si=uINXINhmNvavr8d0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3 class="video-title">  New York City, Times Square </h3>
     </div>
 </body>
 </html>
