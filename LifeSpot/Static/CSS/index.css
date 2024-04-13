@@ -27,8 +27,13 @@ header, footer, aside, body, .navbar, .video-container {
 }
 
 header {
+    color: black;
     padding-left: 1%;
     padding-top: 1.2%;
+}
+
+#header-index {
+    color: #44453f;
 }
 
 footer {
@@ -36,6 +41,8 @@ footer {
     botom: 0;
     font-size: medium;
     color: dimgrey;
+    line-height: 65%;
+    padding-left: 1%;
 }
 
 aside {
@@ -52,4 +59,16 @@ aside {
 
 body {
     padding-left: 11%;
+}
+
+header, footer, body, .video-container {
+    background-color: mediumaquamarine;
+}
+
+.input {
+    padding-left: 1%;
+}
+
+.input:focus {
+    border: 2px solid blue; 
 }
