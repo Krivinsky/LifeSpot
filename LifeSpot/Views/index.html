@@ -1,36 +1,53 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>LifeSpot</title>
-    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css"/>
+	<meta charset="UTF-8">
+	<title>LifeSpot</title>
+	<!-- Подключение стилей по относительному пути из внешнего файла -->
+	<link href="../Static/CSS/index.css" rel="stylesheet" type="text/css" />
+	<!-- Подключение Javascript внутри страницы-->
+	<script src="../Static/JS/index.js"></script>
+	<script>
+		// Проверка на возраст
+		checkAge();
+
+		// сохранение сессии
+		handleSession();
+
+		// вывод данных сессии в консоль
+		sessionLog();
+
+		// функция для получения пользовательского ввода
+		const inputParseFunction = function () {
+			return document.getElementsByTagName('input')[0].value.toLowerCase();
+		}
+	</script>
 </head>
+
+<header id="header-index">
+	<!--Заголовок страницы-->
+	<h1>LifeSpot — прямые трансляции с улиц</h1>
+	<!--Параграф-->
+	<p> Покажем, что происходит прямо сейчас</p>
+
+	<input type="text"
+		   oninput="filter(inputParseFunction)"
+		   size=50%>
+</header>
+
+<!--SIDEBAR-->
+
 <body>
-	<header id="header-index">
-		<!--Заголовок страницы-->
-		<h1>LifeSpot — прямые трансляции с улиц</h1>
-
-		<!--Параграф-->
-		<p> Покажем, что происходит прямо сейчас</p>
-	</header>
-	<aside id="sidebar">
-		<div class="navbar">
-			<a href="index.html"> <p>О проекте</p> </a>
-			<a href="index.html"> <p>Все трансляции</p> </a>
-		</div>
-	</aside>
-
-
 	<div class="video-container">
-		<iframe width="515" height="290" src="https://www.youtube.com/embed/ZYuY3bEp8eY?si=VMvDGS4uiuuJZmpn"
+		<iframe width="515" height="290" src="https://www.youtube.com/embed/cmkAbDUEoyA?si=mFHEihgHlDCGqLlE&amp;controls=0"
 				title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		<h3 class="video-title"> Rio de Janeiro, Copacabana Beach </h3>
+		<h3 class="video-title"> Hollywood,  Hollywood Beach </h3>
 	</div>
 
 	<div class="video-container">
-		<iframe width="515" height="290" src="https://www.youtube.com/embed/JplMzss6_YE?si=KyETGYgMkMaoTK3Q"
+		<iframe width="515" height="290" src="https://www.youtube.com/embed/JplMzss6_YE?si=KyETGYgMkMaoTK3Q;controls=0"
 				title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -38,20 +55,13 @@
 	</div>
 
 	<div class="video-container">
-		<iframe width="515" height="290" src="https://www.youtube.com/embed/UVftxDFol90?si=uINXINhmNvavr8d0"
+		<iframe width="515" height="290" src="https://www.youtube.com/embed/4qyZLflp-sI?si=qRENIBJxEcsFDfZ0&amp;controls=0"
 				title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		<h3 class="video-title"> New York City, Times Square </h3>
 	</div>
-
-	<div class="input">
-		<input type="text" name="search" />
-	</div>
-
-	<footer>
-		<p> LifeSpot - все права защищены </p>
-		<p> Связаться с нами: contact@lifespot.ru </p>
-	</footer>
 </body>
+
+<!--FOOTER-->
 </html>
