@@ -1,22 +1,16 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>LifeSpot</title>
 	<!-- Подключение стилей по относительному пути из внешнего файла -->
 	<link href="../Static/CSS/index.css" rel="stylesheet" type="text/css" />
 	<!-- Подключение Javascript внутри страницы-->
 	<script src="../Static/JS/index.js"></script>
 	<script>
-		// Проверка на возраст
-		checkAge();
-
-		// сохранение сессии
-		handleSession();
-
-		// вывод данных сессии в консоль
-		sessionLog();
-
+        // обработка сессии
+        handleSession(logger, checker /* Коллбек-функции */);
+		
 		// функция для получения пользовательского ввода
 		const inputParseFunction = function () {
 			return document.getElementsByTagName('input')[0].value.toLowerCase();
